@@ -1,21 +1,15 @@
 package main
 
 import (
-    "example\randbyte"
-    "fmt"
-    "time"
+	"fmt"
+	"os"
 )
 
 func main() {
-
-    // создаём генератор случайных чисел
-    generator := randbyte.New(time.Now().UnixNano()) // в качестве затравки передаём ему текущее время, и при каждом запуске оно будет разным.
-
-    buf := make([]byte, 16)
-
-    for i := 0; i < 5; i++ {
-        n, _ := generator.Read(buf) // единственный доступный метод, но он нам и нужен.
-        fmt.Printf("Generate bytes: %v size(%d)\n", buf, n)
-    }
-
-}
+	var s, sep string
+	for i := 1; i < len(os.Args);i++{
+sep =" "
+s+=sep+os.Args[i]
+    }  
+    fmt.Println("s=",s)
+	}

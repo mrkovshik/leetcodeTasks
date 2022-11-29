@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func nearestExit(maze [][]byte, entrance []int) int {
-crdx:=entrance[1]
-crdy:=entrance[0]
+// crdx:=entrance[1]
+// crdy:=entrance[0]
+return 1
 }
 
 func main() {
