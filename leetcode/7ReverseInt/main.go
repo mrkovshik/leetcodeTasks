@@ -3,10 +3,12 @@ package main
 import (
 		"fmt"
 	"strconv"
+	"math"
 )
 
 func reverse(x int) int {
-strInt:=strconv.Itoa(x)
+	
+strInt:=strconv.Itoa(int(math.Abs(float64(x))))
 lng:=len(strInt)
 newStr:=make([] byte, 0)
 zeroStart:=true
@@ -22,12 +24,18 @@ newStr=append (newStr, strInt[i])
 fmt.Println(newStr)
 }
 res,_:=strconv.Atoi(string(newStr))
+if x<0 {
+	res=-res
+}
+if res > 2147483647 || res<(-2147483648) {
+	return 0
+}
 
 return res
 }
 
 func main() {
-	x := 123
+	x := 58
 	res := reverse(x)
 	fmt.Printf("x =%v, reverse =%v", x,res)
 }

@@ -14,6 +14,8 @@ var tests =[] struct {
 	{1986, "MCMLXXXVI"},
 	{1, "I"},
 	{2345, "MMCCCXLV"},
+	{58, "LVIII"},
+	{1994, "MCMXCIV"},
 }
 
 for _, tt := range tests {

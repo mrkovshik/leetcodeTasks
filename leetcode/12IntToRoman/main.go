@@ -8,7 +8,7 @@ func intToRoman(num int) string {
 		1:    "I",
 		2:    "II",
 		3:    "III",
-		4:    "VI",
+		4:    "IV",
 		5:    "V",
 		6:    "VI",
 		7:    "VII",
@@ -47,7 +47,7 @@ func intToRoman(num int) string {
 		num = num - hndrd*100
 	}
 	if num >= 10 {
-		dcm := num / 100
+		dcm := num / 10
 		res = res + intRomDict[dcm*10]
 		num = num - dcm*10
 	}
@@ -57,7 +57,7 @@ func intToRoman(num int) string {
 }
 
 func main() {
-	num := 1986
+	num := 1994
 	rom := intToRoman(num)
 
 	fmt.Printf("Arabic %v is Roman %v", num, rom)
